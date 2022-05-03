@@ -19,11 +19,8 @@ public class dormBox extends JFrame implements ActionListener{
         this.setTitle("Dorm Selection");
         this.setLayout(new GridLayout(4, 4));
         
-
-
-
         this.add(lbl);
-
+        
 
         }
         /* label options */{
