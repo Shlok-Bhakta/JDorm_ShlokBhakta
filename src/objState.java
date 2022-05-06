@@ -1,5 +1,6 @@
 public class objState {
     int state = 0;
+    int index = 0;
     public int getState(){
         return state;
     }
@@ -12,6 +13,11 @@ public class objState {
     public void stateOff(){
         state = 0;
     }
-
+    public void setIndex(int aindex){
+        index = aindex;
+    }
+    public int getIndex(){
+        return index;
+    }
 
 }

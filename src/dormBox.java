@@ -24,8 +24,8 @@ public class dormBox extends JFrame implements ActionListener{
         super();
 
         /* frame options */ {
-            this.setSize(400, 150);
-            this.setMaximumSize(new Dimension(400, 500));
+            this.setSize(400, 250);
+            
             this.setDefaultCloseOperation(EXIT_ON_CLOSE);
             this.setTitle("Dorm Selection");
             this.setLayout(new GridBagLayout());
@@ -182,12 +182,16 @@ public class dormBox extends JFrame implements ActionListener{
 
         if(e.toString().contains("Private Room")){
             if(privRoom.getState() == 1){
-                privRoom.stateOff();
-                selections.add("> Deselected Private Room\n");
+                
+                selections.remove(privRoom.getIndex());
+                
+                
             }
             else if(privRoom.getState() == 0){
-                privRoom.stateOn();
-                selections.add("> Selected Private Room\n");
+                
+                selections.add("> Private Room\n");
+                privRoom.setIndex(selections.size() - 1);
+                
             }
         }
         if(e.toString().contains("Internet Connection")){
@@ -261,9 +265,10 @@ public class dormBox extends JFrame implements ActionListener{
             }
         }
         
-        
+
         aTextArea.setText(toStringbetter(selections));
-        this.setSize(400, 150+(selections.size()*16));
+        
+
     }
 
 
