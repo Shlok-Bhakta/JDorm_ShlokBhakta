@@ -21,7 +21,7 @@ public class dormBox extends JFrame implements ActionListener {
         super();
 
         /* frame options */ {
-            this.setSize(350, 250);
+            this.setSize(300, 150);
 
             this.setDefaultCloseOperation(EXIT_ON_CLOSE);
             this.setTitle("Dorm Selection");
@@ -241,7 +241,7 @@ public class dormBox extends JFrame implements ActionListener {
         }
 
         aTextArea.setText(toStringbetter(selections));
-        this.setSize(300, 250+selections.size()*17);
+        this.setSize(300, 150+selections.size()*17);
     }
 
 }
